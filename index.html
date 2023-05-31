@@ -5,32 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <div id="alerta">
+
+    </div>
     <header>
         <img src="assets/Logo.png" alt="logo Alura" class="logo">
     </header>
     <main>
-        <div>
-            <section class="contenedor1">
-                <p>Ingrese el texto aquí</p>
-                <ul>
-                    <li><button class="btn" id="btn1">Encriptar</button></li>
-                    <li><button class="btn" id="btn2">Desencriptar</button></li>
-                </ul>
-            </section>
-            <section class="contenedor2">
-                <img src="assets/Muñeco.png" alt="vacio" class="vacio">
-                <div>
-                    <p class="msg" id="msg1">Ningún mensaje fue <br> encontrado</p>
-                </div>                
-                <p class="msg" id="msg2">Ingresa el texto que desees encriptar o desencriptar</p>
-                <button class="btn" id="btn3">Copiar</button>
-            </section>
-        </div>
-        
+        <section class="contenedor" id="contenedor1">
+            <textarea class="input" id="input" cols="30" rows="20" placeholder="Ingrese el texto aquí"></textarea>
+            <div information>                
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg>
+                    Solo letras minúsculas y sin acentos
+                </p>
+            </div>
+            <div class="btn-block">
+                <button class="btn-encriptar" id="btn-encriptar">Encriptar</button></li>
+                <button class="btn-desencriptar" id="btn-desencriptar">Desencriptar</button></li>
+            </div>
+        </section>
+        <section class="contenedor" id="contenedor2">
+            <img src="assets/Muñeco.png" id="img" alt="No encontrado" class="vacio">
+            <p class="output" id="output">
+                <span class="line-1">Ningún mensaje fue encontrado</span></br>  
+                <span class="line-2">Ingrese el texto que deses encriptar o desencriptar.</span>
+            </p>      
+            <button hidden class="btn-copiar" id="btn-copiar">Copiar</button>
+        </section>
     </main>
-    <footer></footer>
-</body>
+    <script src="js/app.js"></script>    
 </html>
