@@ -4,10 +4,15 @@ Aplicación que encripta y desencripta textos.
 "Llaves" de encriptación que utilizadas:
 
 La letra "e" es convertida para "enter"
+
 La letra "i" es convertida para "imes"
+
 La letra "a" es convertida para "ai"
+
 La letra "o" es convertida para "ober"
+
 La letra "u" es convertida para "ufat"
+
 
 Requisitos:
 
@@ -17,6 +22,7 @@ Debe ser posible convertir una palabra para la versión encriptada también devo
 
 Por ejemplo:
 "gato" => "gaitober"
+
 gaitober" => "gato"
 
 La página debe tener campos parainserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
