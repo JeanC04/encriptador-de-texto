@@ -77,10 +77,6 @@ svg{
     height: 100%;
 }
 
-.input::first-letter{
-    text-transform: uppercase;
-}
-
 .input::placeholder{
     color: #0A3871;   
     font-size: 32px;
@@ -104,8 +100,8 @@ svg{
 
 .vacio{
     background-color: white;
-    margin-top: 40%;
-    width: 70%;
+    margin-top: 30%;
+    width: 50%;
 }
 
 .information{
