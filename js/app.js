@@ -3,6 +3,7 @@ const contenido=document.querySelector('#alerta');
 const input=document.querySelector('#input');
 const output=document.querySelector('#output');
 const imagen=document.querySelector('#img');
+const buttons=document.querySelectorAll('button');
 const btnEncriptor=document.querySelector('#btn-encriptar');
 const btnDesencriptar=document.querySelector('#btn-desencriptar');
 const btnCopiar=document.querySelector('#btn-copiar');
@@ -10,6 +11,22 @@ const btnCopiar=document.querySelector('#btn-copiar');
 // UI Interface
 
 class UI{
+    deshabilitarBtn(){
+        buttons.forEach(button => {
+            button.disabled=true;
+            button.classList.remove('btn');  
+            button.classList.add('btn-disabled'); 
+        })
+    }
+
+    habilitarBtn(){
+        buttons.forEach(button => {
+            button.disabled=false;
+            button.classList.remove('btn-disabled');  
+            button.classList.add('btn'); 
+        })
+    }
+
     imprimirAlerta(estado){
         this.limpiarHTML();        
             const divMensaje=document.createElement('div');
@@ -65,16 +82,16 @@ var textOutput=''
 
 function validarTexto(e){
     textInput=e.target.value;
-    let validador = textInput.match(/^[a-z]*$/);
+    let validador = textInput.match(/^[a-z\s]*$/);
     if(!validador || validador === 0) {
         ui.imprimirAlerta(true);
-        btnEncriptor.disabled=true
+        ui.deshabilitarBtn();
         validado=true;
         }      
     else{
         ui.imprimirAlerta(false);
+        ui.habilitarBtn();
         validado=false;
-        btnEncriptor.disabled=false
     }
 }
 

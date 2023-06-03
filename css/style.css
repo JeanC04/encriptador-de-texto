@@ -3,13 +3,15 @@
     font-family: 'Inter';
     font-style: normal;
 }
-
 body{
-    width: 100%;
+    width: 100vw;
     margin: 0;
 }
-
+header{
+    height: 5vh;
+}
 main{
+    height: 94vh;
     display: flex;
 }
 
@@ -17,21 +19,19 @@ svg{
     margin-right: 8px;
 }
 
-button{
-    height: 67px;
+.btn, .btn-disabled{
+    height: 3.5em;
     border-radius: 24px;
     padding: 0;
     cursor: pointer;
     border: 1px solid #0A3871;
+    background: #D8E1EE;
+    color: #0A3871;
     line-height: 19.36px;
     font-size: 16px;
     font-weight:400;   
 }
 
-button:hover{    
-    background: #0A3871;
-    color: #FFFFFF;
-}
 .alerta {
     background-color: #87CEEB; 
     color: #FFFFFF; 
@@ -41,23 +41,21 @@ button:hover{
   }
 
 .logo{
-    margin-top: 40px;
-    margin-left: 85px;
-    margin-left: 5%;
+    margin-top: 2%;
+    margin-left: 3%;
+    position: relative;
+    z-index: 1;
 }
 
 #contenedor1{
     flex-basis: 50%;
-    padding-top: 40px;
     margin-left: 15%;
-    height: 944px;
     display: flex;
     flex-direction: column;
 }
 
 #contenedor2{
     flex-basis: 30%;
-    height: 944px;
     border-radius: 32px;
     background-color: white;
     display: flex;
@@ -92,10 +90,10 @@ button:hover{
 .output{
     background: white;
     color: #495057;
-    /* width: 300px; */
     width: 60%;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    height: 80%;
+    margin-top: 20%;
+    margin-bottom: 20%;
     text-align: center;
     display: block;
     font-size: 24px;
@@ -106,7 +104,8 @@ button:hover{
 
 .vacio{
     background-color: white;
-    margin-top: 243px;
+    margin-top: 40%;
+    width: 70%;
 }
 
 .information{
@@ -118,40 +117,34 @@ button:hover{
 }
 
 .btn-block{
-    margin: 0 0 72px 0;
     display: flex;
+    margin-bottom: 20px;
 }
-
-.btn-encriptar{
+  
+#btn-encriptar{
     flex-basis: 40%;
-    background: #0A3871;
-    color: white;
     text-align: center;
 }
 
-.btn-desencriptar{
+#btn-desencriptar{
     flex-basis: 40%;
-    color: #0A3871;
     text-align: center;
     margin-left: 4%;
 }
 
-
-.btn-copiar{
+#btn-copiar{
+    flex-basis: 70px;
     width: 70%;
-    color: #0A3871;
     text-align: center;
-    position: absolute;
-    margin-top: 845px;
+    margin-bottom: 20px;
 }
 
-.btn-encriptar:hover {
-    background: #FFFFFF;
-    color: #0A3871;
+.btn:hover{
+    background: #0A3871;
+    color: #FFFFFF;    
 }
 
 .line-1{
-    /* width: 336px; */
     width: 30%;
     height: 58px;
     font-weight: 700;
@@ -162,7 +155,6 @@ button:hover{
 }
 
 .line-2{
-    /* width: 336px; */
     height: 48px;
     font-size: 16px;
     line-height: 24px;  
@@ -175,33 +167,39 @@ button:hover{
         flex-direction: column;
         align-items: center;
     }
+
     .contenedor {
       display: flex;
       flex-basis: 100%;  
       width: 80%;
     }
+
     #contenedor1, #contenedor2{
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
+
     .input{
         margin-right: 0;
         width: 100%;
+    }
+
+    .output{
+        height: auto;
     }
 
     .btn-block{
         justify-content: center;
     }
 
-    .btn-encriptar, .btn-desencriptar{
+    #btn-encriptar, #btn-desencriptar{
         flex-basis: auto;
         width: 48%;
     }
 
-    .btn-copiar{
+    #btn-copiar{
+        flex-basis:auto;
         width: 80%;
-        margin-bottom: 10%;   
-        position: static;  
-        margin-top: 40px;          
     }
 
     #img{
@@ -215,7 +213,7 @@ button:hover{
         align-items: center;
     }
 
-    .btn-encriptar, .btn-desencriptar {
+    #btn-encriptar, #btn-desencriptar {
       width: 100%;
       margin-bottom: 5%;
       margin-left: 0;
