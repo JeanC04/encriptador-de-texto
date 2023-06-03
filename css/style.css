@@ -55,7 +55,7 @@ svg{
 }
 
 #contenedor2{
-    flex-basis: 30%;
+    flex-basis: 28%;
     border-radius: 32px;
     background-color: white;
     display: flex;
@@ -101,7 +101,7 @@ svg{
 .vacio{
     background-color: white;
     margin-top: 30%;
-    width: 50%;
+    width: 60%;
 }
 
 .information{
